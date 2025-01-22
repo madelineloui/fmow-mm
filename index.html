@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="fMoW-mm: Measuring and Mitigating Hallucinations in Vision-Language Dataset Generation
+for Remote Sensing">
+  <meta name="keywords" content="Satellite Imagery, Multimodal Analysis, Vision-Language Modeling, Generative AI, Dataset Curation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fMoW-mm</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">fMoW-mm: Measuring and Mitigating Hallucinations in Vision-Language Dataset Generation
+for Remote Sensing</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/madeline-loui">Madeline Anderson*</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.ll.mit.edu/biographies/miriam-cha">Miriam Cha</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://billf.mit.edu/about/bio/">William T. Freeman</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://taylorperron.org/about-taylor/">J. Taylor Perron</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.aiaccelerator.af.mil/AIA-Team/Article-View/Article/3307957/nathaniel-maidel/">Nathaniel Maidel</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://aeroastro.mit.edu/people/kerri-cahoy/">Kerri Cahoy</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>MIT</span>
+            <span class="author-block"><sup>2</sup>MIT Lincoln Laboratory</span>
+            <span class="author-block"><sup>3</sup>DAF MIT AI Accelerator</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">*Correspondence to mloui [at] mit.edu.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                  </span>-->
+<!--                  <span>Paper</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://slideslive.com/39018155/diffusionsat-a-generative-foundation-model-for-satellite-imagery"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-youtube"></i>-->
+<!--                  </span>-->
+<!--                  <span>Video</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/madelineloui/ovdsat.git"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Model Checkpoints Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://zenodo.org/communities/diffusionsat"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="far fa-file-archive"></i>-->
+<!--                  </span>-->
+<!--                  <span>Zenodo</span>-->
+<!--                  </a>-->
+<!--              </span>-->
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://bit.ly/fMoW-mm"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="text-align: center;">
+      <img src="images/pipeline.png" width="750" height="auto">
+    </img>
+      <div class="subtitle has-text-centered">
+        Leveraging multimodal LLMs to enhance vision-language remote sensing datasets enables models like CLIP to excel in complex, domain-specific tasks such as few-shot object detection, showcasing the utility of fMoW-mm.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision language models have achieved impressive results across various fields. However, adoption in remote sensing remains limited, largely due to the scarcity of paired image-text data. To bridge this gap, synthetic caption generation has gained interest, traditionally relying on rule-based methods that use metadata or bounding boxes. While these approaches provide some description, they often lack the depth needed to capture complex wide-area scenes. Large language models (LLMs) offer a promising alternative for generating more descriptive captions, yet they can produce generic outputs and are prone to hallucination. In this paper, we propose a new method to enhance vision-language datasets for remote sensing by integrating maps as external data sources, enabling the generation of detailed, context-rich captions. Additionally, we present methods to measure and mitigate hallucinations in LLM-generated text. We introduce fMoW-mm, a multimodal dataset incorporating satellite imagery, maps, metadata, and text annotations. We demonstrate its effectiveness for automatic target recognition in few-shot settings, achieving superior performance compared to other vision-language remote sensing datasets.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<div class="container is-max-desktop content">
+<img src="/images/motiv_horizontal.png" width="900" height="auto" style="margin: 0 auto;">
+<div class="subtitle has-text-centered">
+  Rule-based captions using metadata and bounding boxes are limited in detail while unimodal LLM captions are fluid but often generic. We leverage LLMs and the semantic density of maps to generate comprehensive and detailed captions for complex wide-area scenes.
+</div>
+</div>
+
+<section class="section" id="Multimodal Dataset Curation">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Multimodal Dataset Curation</h2>
+    <div class="content has-text-justified">
+      <p>The multimodal LLM-based curation process involves four main steps:</p>
+      <ol>
+        <li><b>Gather satellite images and metadata:</b>
+           The <a href="https://arxiv.org/abs/1711.07846">Functional Map of the World</a> (fMoW-rgb) dataset consists of remote sensing images across 83,412 unique locations, featuring objects from 63 categories. Each image comes with corresponding metadata such as category label, latitude, longitude, timestamp, ground sampling distance (GSD), and bounding box. </li>
+        <li><b>Perform OSM Mapbox query to retrieve map tiles:</b>
+          We use the bounding box coordinates from the fMoW-rgb metadata to query the corresponding OSM Static Image tiles through the <a href="https://www.mapbox.com/">Mapbox API</a>, which allows map style customization.</li>
+        <li><b>Generate captions with GPT-4o:</b>
+          To generate captions, we use the <a href="https://platform.openai.com/docs/models#gpt-4o">GPT-4o API</a> from OpenAI, which accepts visual and text inputs. For each sample, we input the fMoW-rgb satellite image, metadata and OSM tile. The input metadata includes the category label, location, latitude, longitude, and GSD. We prompt GPT-4o to describe the remote sensing scene and to include landmarks, relative positions, sizes, colors, and quantities, while leveraging the metadata and map for context. Other LLMs, including open-source options, can be substituted for GPT-4o, as long as they accept visual inputs. </li>
+        <li><b>Combine elements to create multimodal dataset:</b>
+          We combine the satellite image, metadata, OSM tile, and the GPT-4o generated caption to create 83,412 tuples of (satellite, metadata, map, text). The full dataset is available <a href="https://bit.ly/fMoW-mm">here</a>.</li>
+      </ol>
+    </div>
+  <img src="/images/fmow_mm.png" width="900" height="auto" style="margin: 0 auto;">
+  </div>
+</section>
+
+
+
+<section class="section" id="Hallucinations">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Measuring Hallucinations</h2>
+    <p>
+      In our approach, hallucinations often occur when the LLM infers incorrect landmarks during caption generation. To quantify these hallucinations, we compute the false discovery rate (FDR), inspired by BLEU precision, which measures the proportion of false positives in the generated text. Unlike BLEU, which evaluates n-gram overlaps, we calculate precision over variable-length proper nouns and define FDR as 1-precision:
+    </p>
+    <img src="images/fdr.png" width="300" height="auto" style="display: block; margin: 0 auto;">
+    <p>
+      where <i>C</i> is the candidate list of size <i>K</i>, <i>R</i> is the reference list, and the indicator function counts the number of elements in <i>C</i> that are found in <i>R</i>. FDR reflects the proportion of false positives among all predicted positives, effectively quantifying the rate of hallucinations in the generated (candidate) captions. Low FDR scores are desirable.
+    </p>
+  </div>
+</section>
+
+
+
+<section class="section" id="Ablations">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Ablations</h2>
+    <p>
+      We perform ablations to evaluate how components of our curation pipeline affect hallucination rates (FDR) and measure the percentage of uncertain words as a proxy for LLM uncertainty.
+    </p>
+    <p>
+      <ul>
+        <li><strong>Map Resolution:</strong> We vary the resolution of the OSM input to GPT-4o, considering {256, 512, 1024} resolutions.</li>
+        <li><strong>Map Types:</strong>:
+          <ul>
+            <li>All Labels: Includes all available labels on the map.</li>
+            <li>Landmarks-Only: Includes only landmark labels, excluding street names.</li>
+            <li>Streets-Only: Includes only street names, excluding landmark labels.</li>
+            <li>No Labels: Displays the segmentation map without any text labels.</li>
+          </ul>
+        </li>
+        <li><strong>Prompt Ensembling:</strong> We generate multiple prompts for the same question and aggregate the responses to analyze convergence. We experiment with {1, 3, 5} prompts.</li>
+      </ul>
+    </p>
+    <img src="images/ablations_horizontal.png" width="900" height="auto" style="display: block; margin: 0 auto;">
+    <div class="subtitle has-text-centered">
+      We use 1024 resolution, the landmarks-only map type, and 3 ensembled prompts for the final dataset. This configuration results in the best balance, reducing hallucinations while limiting uncertainty.
+    </div>
+
+<!--    <p>Increasing map resolution reduces hallucination rates and uncertain word percentages, highlighting the importance of map legibility. We use a 1024x1024 resolution for fMoW-mm. While further increases in resolution may offer additional benefits, we leave this exploration for future work due to computational constraints.</p>-->
+
+<!--    <p>Adding text labels, such as landmarks and street names, predictably increases hallucination rates. The inclusion of street names (e.g., streets-only, all-labels) results in a more pronounced increase, likely because non-horizontally aligned street names introduce ambiguity that leads to hallucinations. Captions generated without labels (i.e., no-label) achieve the lowest hallucination rates but are often overly generic, with a high rate of uncertain word usage. For the fMoW-mm dataset, we selected the landmarks-only configuration as it strikes a good balance, minimizing hallucinations while maintaining reasonable specificity.</p>-->
+
+<!--    <p>Prompt ensembling did not result in noticeable improvements. We suspect that repeated hallucinations across responses may increase overlap, propagating errors into the final captions. For fMoW-mm, we aggregate responses from three prompts, yielding the lowest FDR.</p>-->
+
+  </div>
+</section>
+
+
+<section class="section" id="Few-Shot Object Detection with CLIP">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Few-Shot Object Detection with CLIP</h2>
+    <p>
+      We continually pretrain the <a href="https://arxiv.org/abs/2103.00020">CLIP</a> ViT-L/14 model using the fMoW-mm dataset. The model was continually trained for 50 epochs with a batch size of 125. We compare performance with vision-language baselines: CLIP, OpenCLIP, <a href="https://arxiv.org/abs/2306.11300">GeoRSCLIP</a>, and <a href="https://arxiv.org/abs/2306.11029">RemoteCLIP</a>.
+    </p>
+    <p>
+      We evaluate the learned visual representation on few-shot object detection based on <a href="https://github.com/xavibou/ovdsat">OVDSAT</a>, using the <a href="https://arxiv.org/abs/1909.00133">DIOR</a> dataset, averaged over 5 splits. Our model demonstrates improved performance across all n-shots, showing its viability for data-scarce scenarios. Although the fMoW-mm dataset is much smaller than the datasets used for GeoRSCLIP (~5M) and RemoteCLIP (~150k), it achieves superior performance, highlighting the benefits of increased semantic density in the generated captions.
+    </p>
+    <img src="images/results.png" width="550" height="auto" style="display: block; margin: 0 auto;">
+    <div class="subtitle has-text-centered">
+      mAP50 scores for 5, 10, and 30-shot object detection on the DIOR dataset using various visual backbones shows superior performance using fMoW-mm.
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<!--    <pre><code>@inproceedings{-->
+<!--    khanna2024diffusionsat,-->
+<!--    title={DiffusionSat: A Generative Foundation Model for Satellite Imagery},-->
+<!--    author={Samar Khanna and Patrick Liu and Linqi Zhou and Chenlin Meng and Robin Rombach and Marshall Burke and David B. Lobell and Stefano Ermon},-->
+<!--    booktitle={The Twelfth International Conference on Learning Representations},-->
+<!--    year={2024},-->
+<!--    url={https://openreview.net/forum?id=I5webNFDgQ}-->
+<!--}</code></pre>-->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website is borrowed from the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of the Nerfies website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
